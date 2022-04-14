@@ -1,0 +1,20 @@
+footer {
+  background: linear-gradient(0deg, rgb(255, 187, 0, 1) 0%, rgba(248, 66, 66, 34) 50%, rgba(255, 187, 0, 1) 100%);
+  margin-top: 1em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 1366px;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.7em;
+  text-align: center;
+  color: azure;
+}
+
+/* footer span {
+  font-size: 1.5em;
+} */

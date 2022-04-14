@@ -1,0 +1,36 @@
+<header>
+  <div style="text-align: center;">
+    <span>
+      <a style="margin-left: 0px;" routerLink="/themes">All News</a>
+      <a style="margin-left: 20px; margin-right: 20px;" routerLink="/themes/new">Add News</a>
+    </span>
+    <a routerLink="/home">
+      <img src="/assets/news-blue.png" alt="logo" style="height: 64px; width: 64px; vertical-align: middle;">
+    </a>
+    <span class="mini-navbar" *ngIf="!(isLoggedIn$ | async)">
+      <a style="margin-left: 20px;" routerLink="/user/login">Login</a>
+      <a style="margin-left: 20px;" routerLink="/user/register">Register</a>
+    </span>
+    <span *ngIf="(isLoggedIn$ | async)">
+      <a style="margin-left: 20px;" routerLink="/user/profile">{{( currentUser$ | async).username}}'s Profile</a>
+      <a style="margin-left: 20px;" href="javascript:void(0);" (click)="logoutHandler()">Logout</a>
+    </span>
+  </div>
+  <!-- <nav>
+    <ul>
+      <li>
+        <a routerLink="/home">Home</a>
+      </li>
+      <li>
+        <a routerLink="/themes">Themes</a>
+      </li>
+      <li>
+        <a routerLink="/themes/new">New Theme</a>
+      </li>
+    </ul>
+  </nav> -->
+  <p *ngIf="!!message" [ngClass]="{'error-message': isMessageError, 'success-message': !isMessageError}"
+    class="notification">
+    {{message}}
+  </p>
+</header>
