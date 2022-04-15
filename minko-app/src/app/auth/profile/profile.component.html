@@ -1,4 +1,4 @@
-<div class="profile"><img src="/assets/profile.png" alt="default user">
+<div class="profile"><img src="/assets/profile-icon.png" alt="default user">
     <h3>User Info:</h3>
 
     <ng-container *ngIf="(currentUser$ | async) as currentUser">
@@ -16,7 +16,7 @@
                 <p>{{currentUser.tel}}</p>
             </div>
 
-            <button (click)="enterEditMode(currentUser)" class="edit-button">Edit</button>
+            <!-- <button (click)="enterEditMode(currentUser)" class="edit-button">Edit</button> -->
         </ng-container>
 
         <ng-container *ngIf="isInEditMode$ | async">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <button type="button" (click)="exitEditMode()" class="red-button">Cancel</button>
-                <button  [disabled]="editProfileForm.invalid" class="green-button">Save</button>
+                <button class="green-button">Save</button>
             </form>
         </ng-container>
     </ng-container>

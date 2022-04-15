@@ -68,7 +68,7 @@ export class ProfileComponent implements OnInit {
   }
 
   updateProfile(): void {
-    // Offline updated code.
+    console.log('edit');
     let countryPrefix = this.editProfileForm.value['select-tel'];
     if (!this.editProfileForm.value.tel) {
       countryPrefix = '';
@@ -81,11 +81,6 @@ export class ProfileComponent implements OnInit {
         tel: countryPrefix + this.editProfileForm.value.tel,
       }
     }));
-    // End of offline update.
-
-    // Previous code.
-
-    // this.exitEditMode();
   }
 
   exitEditMode(): void {

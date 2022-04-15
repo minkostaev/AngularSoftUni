@@ -7,7 +7,7 @@
         <p class="field field-icon">
             <input formControlName="username"
                 [class.input-error]="registerFormGroup.controls['username'].touched && registerFormGroup.controls['username'].invalid"
-                type="text" name="username" id="username" placeholder="Johny">
+                type="text" name="username" id="username" placeholder="john">
         </p>
 
         <ng-container
@@ -21,11 +21,9 @@
             </p>
         </ng-container>
 
-
-
         <!-- email -->
         <p class="field field-icon">
-            <input formControlName="email" type="email" name="email" id="email" placeholder="john.doe@gmail.com"
+            <input formControlName="email" type="email" name="email" id="email" placeholder="john.smith@gmail.com"
                 [class.input-error]="shouldShowErrorForControl('email')">
         </p>
 
