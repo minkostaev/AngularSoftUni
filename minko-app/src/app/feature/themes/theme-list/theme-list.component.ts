@@ -10,20 +10,6 @@ import { ThemeService } from '../../../core/theme.service';
   styleUrls: ['./theme-list.component.css']
 })
 export class ThemeListComponent implements OnInit, AfterViewInit {
-  l10n = {
-    'en': {
-      'no-themes-message': 'No themes!'
-    },
-    'bg': {
-      'no-themes-message': 'Няма теми!'
-    }
-  }
-
-  localize(key: string, l10n: Map<string, Map<string, string>>) {
-    const local = 'bg';
-
-    return l10n[local][key];
-  }
 
   themeList: ITheme[];
 

@@ -26,14 +26,8 @@ export class ThemesDetailPageComponent implements OnInit {
       const themeId = params['themeId'];
       this.themeService.loadThemeById(themeId).subscribe(theme => {
         this.theme = theme;
-        this.canSubscribe = !this.theme.subscribers.includes('5fa64b162183ce1728ff371d');
       });
     })
-  }
-
-
-  canLike(comment: IPost){
-    return !comment.likes.includes('5fa64b162183ce1728ff371d');
   }
 
 }

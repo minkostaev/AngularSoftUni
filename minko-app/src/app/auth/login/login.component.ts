@@ -38,10 +38,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     private router: Router) { }
 
   ngOnInit(): void {
-    // this.store.dispatch(initializeLoginState());
-    // this.loginFormGroup.get('email').valueChanges.subscribe(value => {
-    //   console.log('email changed', value);
-    // })
+
   }
 
   ngOnDestroy(): void {
@@ -49,11 +46,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   loginHandler(): void {
-    // TODO stoimenovg: validate user's data.
-    // this.userService.login();
-    // this.router.navigate(['/home']);
 
-    // console.log('fromClickHandler', this.loginFormGroup.valid);
   }
 
   handleLogin(): void {
